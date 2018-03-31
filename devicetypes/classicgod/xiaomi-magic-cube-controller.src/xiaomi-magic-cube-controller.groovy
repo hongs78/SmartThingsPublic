@@ -17,7 +17,7 @@
  */
 
 metadata {
-	definition (name: "Xiaomi Magic Cube", namespace: "hongs78", author: "hongs78") {
+	definition (name: "Xiaomi Magic Cube Controller", namespace: "hongs78", author: "hs") {
 		capability "Actuator"
 		capability "Button"
 		capability "Configuration"
