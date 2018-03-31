@@ -1,10 +1,9 @@
 /**
- *  "Xiaomi Magic Cube"
+ *  "Xiaomi Magic Cube Controller"
  *
  *  Author: Artur Draga
  *	
  * 	Based on code by: Oleg "DroidSector" Smirnov
- *  Based on code by: Artur Draga 'ClassicGOD'
  *
  *  Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except
  *  in compliance with the License. You may obtain a copy of the License at:
@@ -18,7 +17,7 @@
  */
 
 metadata {
-	definition (name: "Xiaomi Magic Cube", namespace: "hongs78", author: "hongs78") {
+	definition (name: "Xiaomi Magic Cube Controller", namespace: "ClassicGOD", author: "Artur Draga") {
 		capability "Actuator"
 		capability "Button"
 		capability "Configuration"
@@ -142,6 +141,7 @@ def setFace(Integer faceId) {
 def parse(String description) {
 	def value = zigbee.parse(description)?.text
 	
+
 	if (description?.startsWith('catchall:')) {
 		parseCatchAllMessage(description)
 	}
